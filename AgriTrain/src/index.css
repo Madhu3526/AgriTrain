@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Agriculture-themed design system. All colors, gradients, fonts, etc defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 45 30% 96%;
+    --foreground: 120 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 120 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 20% 15%;
+
+    --primary: 120 45% 25%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 120 25% 85%;
+    --secondary-foreground: 120 20% 15%;
+
+    --muted: 120 15% 90%;
+    --muted-foreground: 120 10% 45%;
+
+    --accent: 35 70% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 120 15% 85%;
+    --input: 120 15% 92%;
+    --ring: 120 45% 25%;
+
+    /* Agricultural themed colors */
+    --farm-green: 120 45% 25%;
+    --farm-green-light: 120 35% 40%;
+    --farm-green-lighter: 120 25% 70%;
+    --earth-brown: 25 45% 35%;
+    --earth-brown-light: 25 35% 55%;
+    --sky-blue: 200 80% 75%;
+    --sky-blue-light: 200 60% 85%;
+    --sunset-orange: 35 85% 65%;
+    --crop-yellow: 50 85% 70%;
+    
+    /* Gradients */
+    --gradient-farm: linear-gradient(135deg, hsl(var(--farm-green)), hsl(var(--farm-green-light)));
+    --gradient-earth: linear-gradient(135deg, hsl(var(--earth-brown)), hsl(var(--earth-brown-light)));
+    --gradient-sky: linear-gradient(135deg, hsl(var(--sky-blue)), hsl(var(--sky-blue-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--farm-green)), hsl(var(--sky-blue)));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100% / 0.9), hsl(120 15% 96% / 0.9));
+    
+    /* Shadows */
+    --shadow-farm: 0 10px 30px -10px hsl(var(--farm-green) / 0.3);
+    --shadow-earth: 0 8px 25px -8px hsl(var(--earth-brown) / 0.25);
+    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.4);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 120 20% 8%;
+    --foreground: 45 30% 95%;
+
+    --card: 120 15% 12%;
+    --card-foreground: 45 30% 95%;
+
+    --popover: 120 15% 12%;
+    --popover-foreground: 45 30% 95%;
+
+    --primary: 120 35% 40%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 120 15% 20%;
+    --secondary-foreground: 45 30% 95%;
+
+    --muted: 120 15% 20%;
+    --muted-foreground: 120 10% 65%;
+
+    --accent: 35 70% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 120 15% 25%;
+    --input: 120 15% 25%;
+    --ring: 120 35% 40%;
+    
+    /* Dark mode agricultural colors */
+    --farm-green: 120 35% 40%;
+    --farm-green-light: 120 30% 50%;
+    --farm-green-lighter: 120 25% 65%;
+    --earth-brown: 25 35% 45%;
+    --earth-brown-light: 25 30% 60%;
+    --sky-blue: 200 60% 65%;
+    --sky-blue-light: 200 50% 75%;
+    --sunset-orange: 35 75% 60%;
+    --crop-yellow: 50 75% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
